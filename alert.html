@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,110 +8,114 @@
 
     <link rel="stylesheet" href="alert.css">
 </head>
+
 <body>
-    <!--상단 바-->
-    <div class="header">
-    <button class="back_btn">
-        <img src="images/back.png">
-    </button>
-    <h2>알림 센터</h2>
-    <button class="calendar_btn">
-        <img src="images/calendar.png">
-    </button>
-    </div>        
-    
-    <div class="date_list">
-        <div class="date_card">
-        <p>5월</p>
-        <h2>23</h2>
-        <span>금</span>
-    
-        <div class="date_card">
-        <p>5월</p>
-        <h2>24</h2>
-        <span>토</span>
-    </div>
+    <div class='container'>
+        <!--상단 바-->
+        <div class="header">
+            <button class="backbtn">
+                <img src="images/back.png" alt="back">
+            </button>
+            <h2>알림 센터</h2>
+            <button class="calendarbtn">
+                <img src="images/calender.png" alt="calender">
+            </button>
+        </div>
 
-    <div class="date_card">
-        <p>5월</p>
-        <h3>25</h3>
-        <span>일</span>
-    </div>
+        <!-- 날짜 -->
+        <div class="date_list">
+            <button class="date_card">
+                <span class="month">5월</span>
+                <h3>23</h3>
+                <span class="day">금</span>
+            </button>
 
-    <div class="date_card">
-        <p>5월</p>
-        <h2>26</h2>
-        <span>월</span>
+            <button class="date_card">
+                <span class="month">5월</span>
+                <h3>24</h3>
+                <span class="day">토</span>
+            </button>
 
-    <div class="date_card">
-        <p>5월</p>
-        <h2>27</h2>
-        <span>화</span>
+            <button class="date_card active">
+                <span class="month">5월</span>
+                <h3>25</h3>
+                <span class="day">일</span>
+            </button>
 
-    </div>
+            <button class="date_card">
+                <span class="month">5월</span>
+                <h3>26</h3>
+                <span class="day">월</span>
+            </button>
 
-    <!--필터-->
-    <div class="category">
+            <button class="date_card">
+                <span class="month">5월</span>
+                <h3>27</h3>
+                <span class="day">화</span>
+            </button>
+        </div>
 
-    <button class="active">
-    <button>ALL</button>
-    <button>긴급</button>
-    <button>주의</button>
-    <button>일반</button>
-    </button>
-    </div>
+        <!-- 필터 -->
+        <div class="category">
+            <button class="categorybtn_active">All</button>
+            <button class="categorybtn">긴급</button>
+            <button class="categorybtn">주의</button>
+            <button class="categorybtn">일반</button>
+        </div>
 
-    <!--알림목록-->
-    <div class="alert_list">
-    <div class="alert_card urgent">
-        <p class="type">긴급</p>
-        <h3>낙상 위험 감지</h3>
-        <div class="bottom">
-            <span>🟣 10:00 AM</span>
-            <div class="state">확인</div>
+        <!-- 알림 목록 -->
+        <div class="alert_list">
+            <div class="alert_card">
+                <span class="urgent">긴급</span>
+                <h3 class="alert_title">
+                    낙상 위험 감지
+                </h3>
+                <div class="alert_bottom">
+                    <div class="time_box">
+                        <img src="images/clock.png" alt="clock">
+                        <span class="alert_time">10:00 AM</span>
+                    </div>
+                    <button class="confirm_btn urgent_btn">
+                        확인
+                    </button>
+                </div>
+            </div>
+
+            <div class="alert_card">
+                <span class="normal">일반</span>
+                <h3 class="alert_title">
+                    정기 테스트 완료
+                </h3>
+                <div class="alert_bottom">
+                    <div class="time_box">
+                        <img src="images/clock.png" alt="clock">
+                        <span class="alert_time">12:00 PM</span>
+                    </div>
+                    <button class="confirm_btn normal_btn">
+                        확인
+                    </button>
+                </div>
+            </div>
+
+            <div class="alert_card">
+                <span class="normal">일반</span>
+                <h3 class="alert_title">
+                    활동 요약 리포트
+                </h3>
+                <div class="alert_bottom">
+                    <div class="time_box">
+                        <img src="images/clock.png" alt="clock">
+                        <span class="alert_time">12:00 PM</span>
+                    </div>
+                    <button class="confirm_btn normal_btn">
+                        확인
+                    </button>
+                </div>
+            </div>
 
         </div>
 
-    </div>
-
-
-
-    <div class="alert_card normal">
-
-        <p class="type">일반</p>
-
-        <h3>정기 테스트 완료</h3>
-
-        <div class="bottom">
-
-            <span>🟣 12:00 PM</span>
-
-            <div class="state">확인</div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--아래바-->
+        <!--아래바-->
         <div class='bar'>
             <div class='home'>
                 <button id='homebtn'>
@@ -128,6 +133,7 @@
                 </button>
             </div>
         </div>
-    
+    </div>
 </body>
+
 </html>

@@ -1,8 +1,197 @@
+/* 전체 */
+body{
+    font-family:Lexend Deca;
+    background:#fff;
+}
 
+/* 상단 */
+.header{
+    width:90%;
+    margin: 24px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
+.header h2{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+}
 
+.backbtn,
+.calendarbtn{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
 
+.backbtn img{
+    width:28px;
+    height:28px;
+}
 
+.calendarbtn img{
+    width:24px;
+    height:24px;
+}
+
+/* 날짜 */
+
+.date_list{
+    width:90%;
+    height:120px;
+    margin:auto;
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    overflow-y:visible;
+    padding:8px 0;
+}
+
+.date_list::-webkit-scrollbar{
+    display:none;
+}
+
+.date_card{
+    min-width:74px;
+    height:95px;
+    border:none;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.date_card .month{
+    font-size:12px;
+    color:#777;
+}
+
+.date_card h3{
+    margin:5px 0;
+    font-size:24px;
+}
+
+.date_card .day{
+    font-size:14px;
+    color:#666;
+}
+
+/* 활성화 버튼*/
+.active{
+    background:#5F32E1;
+    color:white;
+}
+
+.active .month,
+.active .day{
+    color:white;
+}
+
+/* 카테고리 */
+.category{
+    width:90%;
+    margin:18px auto;
+    display:flex;
+    justify-content:space-between;
+}
+
+.categorybtn,
+.categorybtn_active{
+    width:80px;
+    height:40px;
+    border:none;
+    border-radius:20px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.categorybtn{
+    background:#EEE9FF;
+    color:#5F32E1;
+}
+
+.categorybtn_active{
+    background:#5F32E1;
+    color:white;
+}
+
+/* 카드 */
+.alert_list{
+    width:90%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.alert_card{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 5px 14px rgba(0,0,0,.08);
+}
+
+.urgent{
+    font-size:14px;
+    color:#999;
+}
+
+.normal{
+    font-size:14px;
+    color:#999;
+}
+
+.alert_title{
+    margin:12px 0 18px;
+    font-size:22px;
+}
+
+.alert_bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.time_box{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.time_box img{
+    width:15px;
+    height:15px;
+}
+
+.alert_time{
+    color:#8B63FF;
+    font-size:14px;
+}
+
+.confirm_btn{
+    width:55px;
+    height:24px;
+    border:none;
+    border-radius:20px;
+    font-size:11px;
+    cursor:pointer;
+}
+
+.urgent_btn{
+    background:#FFE4DA;
+    color:#FF7B52;
+}
+
+.normal_btn{
+    background:#DCEEFF;
+    color:#4A9BFF;
+}
 
 /* 아래 바 */
 .bar {
