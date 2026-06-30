@@ -45,7 +45,8 @@ body {
 }
 
 .alarm img {
-    margin-right: 10px;
+    margin-right: 22px;
+    margin-top: 15px;
     width: 28px;
     height: 28px;
 }
@@ -94,7 +95,7 @@ body {
     border: none;
     color: #5f32e1;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -123,11 +124,7 @@ body {
 .progress_circle .progress {
     stroke: white;
     stroke-linecap: round;
-
-    /* 반지름 42.5 기준 둘레 */
     stroke-dasharray: 267;
-
-    /* 85% 진행 */
     stroke-dashoffset: 40;
 }
 
@@ -179,10 +176,6 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
-}
-
-.monitor_list::-webkit-scrollbar {
-    display: none;
 }
 
 .monitor_card {

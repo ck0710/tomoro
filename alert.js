@@ -18,7 +18,7 @@ document.querySelector(".backbtn").addEventListener("click", () => {
     history.back();
 });
 
-// 날짜 선택 (누른 날짜만 보라색)
+// 날짜 선택 (누르면 보라색)
 const dateCards = document.querySelectorAll(".date_card");
 dateCards.forEach((card) => {
     card.addEventListener("click", function () {
@@ -33,6 +33,7 @@ const alertCards = document.querySelectorAll(".alert_card");
 
 categoryBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
+        
         // 누른 버튼만 보라색
         categoryBtns.forEach((b) => (b.className = "categorybtn"));
         btn.className = "categorybtn_active";

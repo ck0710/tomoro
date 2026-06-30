@@ -48,8 +48,8 @@ body {
 
 /* TOMORO */
 h1 {
-    margin-top: 140px;
-    font-size: 34px;
+    margin-top: 120px;
+    font-size: 35px;
     font-weight: bold;
     color: #000;
     text-align: center;
@@ -58,7 +58,7 @@ h1 {
 /* 설명 */
 p {
     margin-top: 4px;
-    font-size: 20px;
+    font-size: 22px;
     color: #666;
     text-align: center;
 }
@@ -139,6 +139,15 @@ p {
     right: 20px;
     width: 30px;
     height: 30px;
+}
+
+.back1 {
+    position: fixed;
+    width: 400px;
+    height: auto;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* 회원가입 */

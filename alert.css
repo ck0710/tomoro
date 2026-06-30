@@ -8,12 +8,12 @@ body {
     font-family:LexendDeca;
 }
 
-/* 폼 요소도 같은 폰트 */
+/* 폰트 */
 button,
 input,
 select,
 textarea{
-    font-family:inherit;
+    font-family:LexendDeca;
 }
 
 /* 컨테이너 */
@@ -36,7 +36,7 @@ textarea{
 .header h2{
     margin:0;
     font-size:20px;
-    font-weight:700;
+    font-weight:bold;
 }
 
 .backbtn,
@@ -62,7 +62,7 @@ textarea{
     height:120px;
     margin:auto;
     display:flex;
-    gap:18px;
+    gap:12px;
     overflow-x:auto;
     overflow-y:visible;
     padding:8px 0;
@@ -88,7 +88,7 @@ textarea{
 
 .date_card .month{
     font-size:12px;
-    color:#777;
+    color:#000;
 }
 
 .date_card h3{
@@ -97,8 +97,8 @@ textarea{
 }
 
 .date_card .day{
-    font-size:14px;
-    color:#666;
+    font-size:12px;
+    color:#000;
 }
 
 /* 활성화 버튼*/
@@ -156,11 +156,13 @@ textarea{
     box-shadow:0 5px 14px rgba(0,0,0,.08);
 }
 
+/* 긴급 */
 .urgent{
     font-size:14px;
     color:#999;
 }
 
+/* 일반 */
 .normal{
     font-size:14px;
     color:#999;
@@ -168,7 +170,8 @@ textarea{
 
 .alert_title{
     margin:12px 0 18px;
-    font-size:22px;
+    font-size:20px;
+    font-weight: 400;
 }
 
 .alert_bottom{

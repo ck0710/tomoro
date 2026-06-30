@@ -1,17 +1,17 @@
-const ctx = document.getElementById('weeklyChart');
+const ctx = document.getElementById('weeklychart');
 
 new Chart(ctx, {
     type: 'line',
     data: {
         labels: ['월', '화', '수', '목', '금', '토', '일'],
         datasets: [{
-            data: [82, 84, 80, 88, 86, 91, 89],
+            data: [88, 68, 72, 64, 88, 58, 78],
             borderColor: '#5F32E1',
-            borderWidth: 3,
-            tension: 0.4,
-            fill: false,
-            pointRadius: 3,
-            pointBackgroundColor: '#5F32E1'
+            borderWidth: 2,
+            pointRadius: 4,
+            pointBackgroundColor: '#fff',
+            pointBorderColor: '#5F32E1',
+            pointBorderWidth: 2
         }]
     },
     options: {
