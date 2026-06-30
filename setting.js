@@ -257,3 +257,41 @@ resetBtn.addEventListener("click", () => {
     timePicker.classList.remove("show");
     timeDefault.style.display = "block";
 });
+
+
+/* 테스트 난이도 토글 */
+const diffToggle = document.querySelector(".switch input");
+const diffSlider = document.querySelector(".slider");
+
+// 꺼짐 상태
+const toggleStyle = document.createElement("style");
+toggleStyle.textContent =
+    ".slider.off{ background:#ccc; }" +
+    ".slider.off::before{ right:auto; left:2px; }";
+document.head.appendChild(toggleStyle);
+
+// 체크 상태에 맞춰 색/노브 위치 갱신
+function renderToggle() {
+    diffSlider.classList.toggle("off", !diffToggle.checked);
+}
+
+diffToggle.addEventListener("change", renderToggle);
+renderToggle();
+
+
+/* 새로고침 버튼 회전 */
+const refreshBtns = document.querySelectorAll(".refreshbtn");
+
+// 회전 애니메이션을 JS로 주입 (css/html 안 건드림)
+const spinStyle = document.createElement("style");
+spinStyle.textContent =
+    "@keyframes spin{ to { transform: rotate(-360deg); } }" +
+    ".refreshbtn.spin img{ animation: spin .6s linear; }";
+document.head.appendChild(spinStyle);
+
+refreshBtns.forEach((btn) => {
+    // 누르면 한 바퀴 회전
+    btn.addEventListener("click", () => btn.classList.add("spin"));
+    // 끝나면 클래스 제거 → 다시 누를 수 있음
+    btn.addEventListener("animationend", () => btn.classList.remove("spin"));
+});
