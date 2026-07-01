@@ -19,20 +19,7 @@ document.querySelector(".backbtn").addEventListener("click", () => {
 });
 
 
-/* alert에서 선택돼 있던 날짜를 기본 선택 */
-const alertSelectedDate = sessionStorage.getItem("alertSelectedDate");
-if (alertSelectedDate) {
-    document.querySelectorAll(".calendar .day").forEach((dayBtn) => {
-        if (dayBtn.classList.contains("disable")) return;
-        const date = dayBtn.querySelector(".date").textContent.trim();
-        if (date === alertSelectedDate) {
-            dayBtn.classList.add("selected");
-        }
-    });
-    sessionStorage.removeItem("alertSelectedDate");
-}
-
-/* 날짜 선택 → 원래 페이지로 날짜 전달 */
+// 날짜 선택 → 원래 페이지로 날짜 전달
 document.querySelectorAll(".calendar .day").forEach((dayBtn) => {
     // 이전/다음 달의 비활성 날짜는 제외
     if (dayBtn.classList.contains("disable")) return;
@@ -47,5 +34,36 @@ document.querySelectorAll(".calendar .day").forEach((dayBtn) => {
         history.back();
     });
 });
+
+
+// 현재 날짜 불러오기
+const month = document.getElementById("month");
+
+function printMonth() {
+    var currentDate = new Date();
+
+    var year = currentDate.getFullYear();
+    var MonthNum = currentDate.getMonth() + 1;
+
+    month.textContent = `${MonthNum}월 ${year}`;
+}
+
+printMonth();
+
+// 날짜 버튼 생성
+
+
+
+
+
+
+
+
+// 오늘 날짜 표시
+const today = new Date();
+
+const todaycheck = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+
+sessionStorage.setItem("alertSelectedDate", todaycheck);
 
 
