@@ -110,10 +110,18 @@ function createDateList(centerDate = getCenterDate()) {
         dateList.appendChild(btn);
     }
 
-    // 선택 카드를 가운데로 스크롤
-    dateList.querySelector(".date_card.active")
-        .scrollIntoView({ inline: "center", block: "nearest" });
+    centerActiveCard();
 }
+
+function centerActiveCard() {
+    const active = dateList.querySelector(".date_card.active");
+    if (!active) return;
+    const listRect = dateList.getBoundingClientRect();
+    const cardRect = active.getBoundingClientRect();
+    dateList.scrollLeft += (cardRect.left - listRect.left) - (listRect.width - cardRect.width) / 2;
+}
+
+window.addEventListener("resize", centerActiveCard);
 
 // 캘린더에서 넘어온 날짜
 createDateList();

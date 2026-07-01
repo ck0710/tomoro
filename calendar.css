@@ -2,13 +2,13 @@
 body {
     background: #fff;
     font-family: LexendDeca;
+    margin: 0;
 }
 
 .container {
     width: 100%;
-    min-width: 360px;
+    min-width: 300px;
     /*max-width: 412px;*/
-    margin: 0 auto;
 }
 
 /* 상단 */
@@ -101,7 +101,9 @@ hr {
 
 /* 날짜 칸 */
 .day {
+    width: 100%;
     min-width: 42px;
+    max-width: 120px;
     height: 100px;
     display: flex;
     flex-direction: column;

@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: LexendDeca;
+    margin: 0;
 }
 
 .container {
@@ -48,6 +49,7 @@ body {
 /* 안내 */
 .notice {
     width: 90%;
+    max-width: 365px;
     margin: 6px auto;
     padding: 6px;
     background: white;
@@ -73,6 +75,7 @@ body {
 
 .device {
     width: 90%;
+    max-width: 365px;
     margin: 26px auto;
 }
 
@@ -153,6 +156,7 @@ body {
 /* 테스트 설정 */
 .test {
     width: 90%;
+    max-width: 365px;
     margin: auto;
 }
 
